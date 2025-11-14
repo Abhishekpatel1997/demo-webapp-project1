@@ -1,1 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: [ develop, main ]
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - name: Build (placeholder)
+        run: echo "Build step - add your build commands here"
+      - name: Run tests (placeholder)
+        run: echo "Run tests - add test commands here"
 
